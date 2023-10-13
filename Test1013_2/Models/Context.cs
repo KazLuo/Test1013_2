@@ -5,14 +5,14 @@ using System.Linq;
 
 namespace Test1013_2.Models
 {
-    public partial class DbContext : DbContext
+    public partial class Context : DbContext
     {
-        public DbContext()
-            : base("name=DbContext")
+        public Context()
+            : base("name=Context")
         {
         }
 
-
+        public virtual DbSet<Org> Orgs { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
         }
